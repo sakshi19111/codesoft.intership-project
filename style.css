@@ -1,136 +1,84 @@
-/* Reset & Fonts */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #fdfdfd;
-  color: #333;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Header */
-header {
-  background: rgb(255, 255, 255);
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #2575fc;
-}
-
-header .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a:hover {
-  color: #2575fc;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background: white;
-  color: #2575fc;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: #2575fc;
-  color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-/* Section Styles */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* Projects */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.card {
-  background: #f1f1f1;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #000;
   transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: #e0eaff;
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
 }
 
-/* Contact Section */
-.contact p {
-  font-size: 1.1rem;
-  margin: 10px 0;
+.calculator {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
+#display {
+  height: 60px;
+  background: #eee;
+  margin-bottom: 20px;
+  text-align: right;
   padding: 15px;
-  font-size: 0.9rem;
+  font-size: 24px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-gap: 10px;
+}
+
+button {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ddd;
+  color: #000;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #bbb;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark .calculator {
+  background: #333;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark button {
+  background-color: #555;
+  color: #fff;
+}
+
+body.dark button:hover {
+  background-color: #777;
+}
+
+body.dark #display {
+  background: #444;
+  color: #fff;
 }
